@@ -23,7 +23,7 @@ public class MovieController {
                  @RequestParam(defaultValue = "movieName") String sortBy){
 
         return ResponseEntity.status(HttpStatus.OK)
-                .body(services.getAllMovies(pageNo-1,pageSize,sortBy));
+                .body(services.getAllMovies(pageNo,pageSize,sortBy));
     }
     @GetMapping("/{id}")
     ResponseEntity<Movie> getMovieById(@PathVariable Long id){

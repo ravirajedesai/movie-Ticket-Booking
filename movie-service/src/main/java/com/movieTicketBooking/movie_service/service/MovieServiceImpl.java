@@ -22,7 +22,7 @@ public class MovieServiceImpl implements MovieServices{
                                     int pageSize,
                                     String sortBy) {
         Pageable pageable= PageRequest.of(
-                pageNo,
+                pageNo-1,
                 pageSize,
                 Sort.by(sortBy).ascending());
 
